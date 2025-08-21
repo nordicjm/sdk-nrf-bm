@@ -159,7 +159,7 @@ function(${SYSBUILD_CURRENT_MODULE_NAME}_pre_cmake)
 
     if(NOT DEFINED SB_CONFIG_BM_BOOTLOADER_NONE AND NOT image STREQUAL "mcuboot")
       if(SB_CONFIG_SOC_SERIES_NRF54LX)
-        set_config_int(installer CONFIG_ROM_START_OFFSET 0x800)
+        set_config_int(installer CONFIG_ROM_START_OFFSET 0x80)
       else()
         set_config_int(installer CONFIG_ROM_START_OFFSET 0x200)
       endif()
